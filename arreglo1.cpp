@@ -11,7 +11,10 @@ int main (){
         if (arreglo[i] != 0){
             sumatoria += arreglo[i];
         } else {
-            
+            ceros++;
         }
     }
+    porcentaje = (ceros * 100) / CantDatos;
+    cout << "La sumatoria de los datos es: " << sumatoria << endl;
+    cout << "El porcentaje de ceros es: " << porcentaje << "%" << endl;
 }
