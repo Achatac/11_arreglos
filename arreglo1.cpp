@@ -3,6 +3,11 @@
 using namespace std;
 
 float promedio(int cantidad[], int canN){
+    float promedio = 0;
+    for (int i = 0; i < canN; i++){
+        promedio += cantidad[i];
+    }
+    return promedio/canN;
 }
 
 int main (){
