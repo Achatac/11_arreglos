@@ -21,7 +21,8 @@ int diaM(float temMedia[]) {
 
 int main (){
     float temMax[7], temMin[7], temMedia[7], tem;
-    string dias[7] = {"Lunes", "Martes", "Miercoles","Jueves", "Viernes", "Sabado", "Domingo"} , diasMax[7];
+    string dias[7] = {"Lunes", "Martes", "Miercoles","Jueves", "Viernes", "Sabado", "Domingo"};
+    bool hayMax;
     for (int i = 0; i < 7; i++){
         cout << "Ingrese la temperatura minima del " << dias[i] << " : "; cin >> temMin[i];
         cout << "Ingrese la temperatura maxima del " << dias[i] << " : "; cin >> temMax[i];
@@ -34,23 +35,15 @@ int main (){
 
     int Dmin = diaM(temMedia);
     cout << "El dia con la temperatura minima es: " << dias[Dmin] <<endl;
-    cout << "Ingrese por teclado la temperatura: "; cin >> tem;
-    int c = 0;
-    for (int w = 0; w < 7; w++){
-        if (tem == temMax[w]){
-            diasMax[0] = dias[w];
-            int c = 0;
-            c++;
+    cout << "Los dias con temperatura maxima que coinciden son: ";
+    for (int w = 0; w < 7; w++) {
+        if (tem == temMax[w]) {
+            cout << dias[w] << "  ";
+            hayMax = true;
         }
     }
-    if (c > 0){
-        cout << "Los dias con temperatura maxima que coinciden es/son: ";
-        for (int e = 0; e < 7; e++){
-            cout << diasmax[e] << "  ";
-        }
-    }
-    else {
-        cout << "No existe ningun dia con temperatura maxima que coincida" ;
+    if (!hayMax) {
+        cout << "No existe ningun dia con temperatura maxima que coincida.";
     }
     return 0;
 }
