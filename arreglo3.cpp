@@ -3,12 +3,12 @@
 #include <string>
 using namespace std;
 
-void Media (float temMax[],float temMin[]);
-void diaM (float temMax[],float temMin[]);
-void TemPorT (float temMax[]);
+float Media (float temMax,float temMin);
+void diaM (float temMax,float temMin);
+void TemPorT (float temMax);
 
-void Media (float temMax[],float temMin[]){
-    
+float Media (float temMax, float temMin){
+    return (temMax + temMin)/2;
 }
 void diaM (float temMax[],float temMin[]){
 
@@ -27,8 +27,8 @@ int main (){
         cout << "Ingrese la temperatura maxima del " << dias[i] << " : "; cin >> temMax[i];
     }
     for (int j = 0; j < 7; j++){
-        temMedia[k] = Media(temMax, temMin);
-        cout << "La temperatura media del " << dias[j] << " es:  " << temMedia[k];
+        temMedia[j] = Media(temMax[j], temMin[j]);
+        cout << "La temperatura media del " << dias[j] << " es:  " << temMedia[j] << endl;
     }
     return 0;
 }
