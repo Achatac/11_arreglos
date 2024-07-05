@@ -21,10 +21,10 @@ void TemPorT (float temMax[]){
 
 int main (){
     float temMax[7], temMin[7], temMedia[7];
-    string[7] = {"Lunes", "Martes", "Miercoles","Jueves", "Viernes", "Sabado", "Domingo"}
+    string dias[7] = {"Lunes", "Martes", "Miercoles","Jueves", "Viernes", "Sabado", "Domingo"};
     for (int i = 0; i < 7; i++){
-        
+        cout << "Ingrese la temperatura minima del " << dias[i] << " : "; cin >> temMin[i];
+        cout << "Ingrese la temperatura maxima del " << dias[i] << " : "; cin >> temMax[i];
     }
-
     return 0;
 }
