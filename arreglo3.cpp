@@ -30,7 +30,7 @@ int main (){
 
     for (int j = 0; j < 7; j++){
         temMedia[j] = Media(temMax[j], temMin[j]);
-        cout << "La temperatura media del " << dias[j] << " es:  " << temMedia[j] << endl;
+        cout << "La temperatura media del " << dias[j] << " es: " << temMedia[j] << endl;
     }
 
     int Dmin = diaM(temMedia);
@@ -47,7 +47,7 @@ int main (){
         cout << "Los dias con temperatura maxima que coinciden son: ";
         for (int e = 0; e < 7; e++) {
             if (tem == temMax[e]) {
-                cout << dias[e] << " ";
+                cout << dias[e] << "  ";
             }
         }
     }
