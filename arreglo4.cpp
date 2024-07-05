@@ -10,8 +10,16 @@ int relleno(int arreglo[], int tam){
     for (int i = 0; i < tam; i++ ){
         arreglo[i] = mult * (i+1);
     }
-}
+    return arreglo[];
+} 
 
 int main (){
+    int arreglo[100], tam;
+    cout << "Ingrese el tamano del arreglo: "; cin >> tam;
+    relleno(arreglo,tam);
+    cout << "El arreglo contiene los elementos: ";
+    for (int j = 0; j < tam; j++ ){
+        cout << arreglo[j] << "  ";
+    }
     return 0;
 }
