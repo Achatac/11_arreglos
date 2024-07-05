@@ -35,15 +35,24 @@ int main (){
 
     int Dmin = diaM(temMedia);
     cout << "El dia con la temperatura minima es: " << dias[Dmin] <<endl;
-    cout << "Los dias con temperatura maxima que coinciden son: ";
+    cout << "Ingrese un valor de temperatura: "; cin >> tem;
+    cout << endl;
     for (int w = 0; w < 7; w++) {
         if (tem == temMax[w]) {
-            cout << dias[w] << "  ";
             hayMax = true;
+            break;
         }
     }
-    if (!hayMax) {
-        cout << "No existe ningun dia con temperatura maxima que coincida.";
+    if (hayMax) {
+        cout << "Los dias con temperatura maxima que coinciden son: ";
+        for (int e = 0; e < 7; e++) {
+            if (tem == temMax[e]) {
+                cout << dias[e] << " ";
+            }
+        }
+    }
+    else {
+        cout << "No existe ningun dia con temperatura maxima que coincida." << endl;
     }
     return 0;
 }
