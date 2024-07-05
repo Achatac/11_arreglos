@@ -4,15 +4,22 @@
 using namespace std;
 
 float Media (float temMax,float temMin);
-void diaM (float temMax,float temMin);
+int diaM (float temMedia[]);
 void TemPorT (float temMax);
 
 float Media (float temMax, float temMin){
-    return (temMax + temMin)/2;
+    return (temMax + temMin)/2.0;
 }
-void diaM (float temMax[],float temMin[]){
+int diaM(float temMedia[]) {
+    int M = 0;
+    for (int k = 1; k < 7; k++) {
+        if (temMedia[k] < temMedia[M]) { 
+            M = k;
+        }
+    }
+    return M;
+}
 
-}
 void TemPorT (float temMax[]){
 
 }
@@ -30,5 +37,7 @@ int main (){
         temMedia[j] = Media(temMax[j], temMin[j]);
         cout << "La temperatura media del " << dias[j] << " es:  " << temMedia[j] << endl;
     }
+    int Dmin = diaM(temMedia);
+    cout << "El dia con la temperatura minima es: " << dias[Dmin];
     return 0;
 }
