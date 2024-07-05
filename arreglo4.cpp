@@ -2,15 +2,14 @@
 #include <iostream>
 using namespace std;
 
-int relleno(int arreglo[], int tam);
+void relleno(int arreglo[], int tam);
 
-int relleno(int arreglo[], int tam){
+void relleno(int arreglo[], int tam){
     int mult;
     cout << "Ingrese el multiplo dentro del arreglo: "; cin >> mult;
     for (int i = 0; i < tam; i++ ){
         arreglo[i] = mult * (i+1);
     }
-    return arreglo[];
 } 
 
 int main (){
