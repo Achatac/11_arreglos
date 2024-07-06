@@ -28,5 +28,14 @@ int main (){
             }
         }
     }
+    if (tamC > 0){
+        cout << "La cantidad de nombres comunes es: " << tamC;
+        for (int p = 0; p < tamC; p++){
+            cout << NomC[p] << " " ;
+        }
+    }
+    else {
+        cout << "no existen nombres comunes";
+    }
     return 0;
 }
